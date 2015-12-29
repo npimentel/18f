@@ -88,7 +88,7 @@ function(FetchOpenFDASrvc) {
 	 					},
 	 				function error(errorResponse) {
 	 					console.log("Error:" + JSON.stringify(errorResponse));
-	 					callback(err);
+	 					callback(errorResponse);
 	 					});
     	 }
      }

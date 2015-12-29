@@ -10,11 +10,11 @@ openFDA.config([ '$routeProvider', '$locationProvider',
 				templateUrl : 'view/core/homepage.html'
 			});
 			
-			$routeProvider.when('/:appId/:modId/:fnId', {
+			$routeProvider.when('/:appId/:modId', {
 				templateUrl : 'view/core/main.html'
 			});
 			
-			$routeProvider.otherwise('/openfda'); 
+			$routeProvider.otherwise('/wqc'); 
 			$locationProvider.html5Mode(false).hashPrefix('!');
 		} ]);
 

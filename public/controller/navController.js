@@ -11,18 +11,19 @@ openFDA.controller('NavCtrl', [ '$scope','$location', '$routeParams','NavSrvc', 
 				if($routeParams.appId){
 					$scope.setApp($routeParams.appId);
 					
-					$scope.activeMenu.modules.forEach(function(mod){
-						if(mod.id === $routeParams.modId){
-							mod.selected = true;	
-							mod.active = true;
-							}						
-						
-						mod.subModules.forEach(function(subMod){
-							if(subMod.id === $routeParams.fnId)
-								subMod.selected = true;
-						});
-					});
+					if($scope.activeMenu){
+						$scope.activeMenu.modules.forEach(function(mod){
+							if(mod.id === $routeParams.modId){
+								mod.selected = true;	
+								mod.active = true;
+								}						
 
+							mod.subModules.forEach(function(subMod){
+								if(subMod.id === $routeParams.fnId)
+									subMod.selected = true;
+							});
+						});
+					}
 				}
 				
 			}, function(errorResponse){

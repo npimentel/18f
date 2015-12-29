@@ -7,7 +7,7 @@ var logger = require('./../utils/logger.js')(module);
 
 
 
-module.exports.mapRps = function(params, callback){
+module.exports.mapus = function(params, callback){
 	var response = {};
 	response.mapData = {};
 	response.orderedData = {};

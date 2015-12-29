@@ -122,10 +122,10 @@ openFDA.controller('DataMapCtrl', [ '$rootScope', '$scope', 'FetchOpenFDASrvc', 
 		}
 	};
 	
-	var response = SharedDataSrvc.getMapData($routeParams, "mapRps", function(err, response, isReload){
+	var response = SharedDataSrvc.getMapData($routeParams, "mapus", function(err, response, isReload){
 		var selectedDataset = SharedDataSrvc.getSelectedDataset();
 		if(err){
-			console.error(JASON.stringify(err));
+			console.error(JSON.stringify(err));
 			return;
 		}
 		
